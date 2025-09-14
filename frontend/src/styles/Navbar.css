@@ -1,0 +1,58 @@
+/* styles/Navbar.css */
+
+/* Navigation container */
+.navbar {
+  @apply bg-gray-800 text-white p-4 shadow-md;
+}
+
+/* Mobile-first approach */
+.navbar-container {
+  @apply flex flex-col space-y-4;
+}
+
+/* Navigation links container */
+.navbar-links {
+  @apply flex flex-col space-y-2;
+}
+
+/* Individual navigation link */
+.navbar-link {
+  @apply text-white no-underline px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  @apply hover:bg-gray-700 hover:text-gray-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800;
+}
+
+/* Active navigation link */
+.navbar-link-active {
+  @apply bg-gray-700 text-gray-200;
+}
+
+/* Tablet and desktop styles */
+@media (min-width: 640px) {
+  .navbar-container {
+    @apply flex-row items-center justify-between space-y-0;
+  }
+
+  .navbar-links {
+    @apply flex-row space-y-0 space-x-1;
+  }
+
+  .navbar-link {
+    @apply px-4 py-2;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1024px) {
+  .navbar {
+    @apply px-6;
+  }
+
+  .navbar-link {
+    @apply px-6 py-2 text-base;
+  }
+
+  .navbar-links {
+    @apply space-x-2;
+  }
+}

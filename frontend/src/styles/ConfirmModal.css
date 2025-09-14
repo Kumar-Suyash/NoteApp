@@ -1,0 +1,63 @@
+/* ConfirmModal.css */
+
+.confirm-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirm-modal {
+  background: white;
+  padding: 24px 32px;
+  border-radius: 8px;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.confirm-message {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.confirm-btn {
+  padding: 8px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-yes {
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+}
+
+.confirm-yes:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+.confirm-no {
+  background-color: #d1d5db; /* gray-300 */
+  color: #374151; /* gray-700 */
+}
+
+.confirm-no:hover {
+  background-color: #9ca3af; /* gray-400 */
+}

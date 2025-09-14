@@ -1,0 +1,100 @@
+/* styles/NoteCard.css */
+
+/* Main note card container */
+.note-card {
+  @apply border border-gray-200 rounded-lg p-4 mb-4 bg-white shadow-sm transition-all duration-200;
+  @apply hover:shadow-md hover:-translate-y-1;
+}
+
+/* Note card header */
+.note-card-header {
+  @apply flex flex-col space-y-2 mb-3;
+}
+
+/* Note title */
+.note-card-title {
+  @apply text-lg font-semibold text-gray-800 m-0 leading-tight;
+}
+
+/* Note meta information */
+.note-card-meta {
+  @apply flex flex-col space-y-1 text-xs text-gray-500;
+}
+
+.note-card-author {
+  @apply font-medium text-gray-600;
+}
+
+.note-card-age {
+  @apply text-gray-500;
+}
+
+/* Note description */
+.note-card-description {
+  @apply mt-2 mb-4 text-gray-700 leading-relaxed;
+  @apply line-clamp-3; /* This will limit to 3 lines */
+}
+
+/* Button container */
+.note-card-actions {
+  @apply flex flex-col space-y-2;
+}
+
+/* Individual buttons */
+.note-card-button {
+  @apply px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.note-card-edit-btn {
+  @apply bg-blue-600 text-white;
+  @apply hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.note-card-delete-btn {
+  @apply bg-red-600 text-white;
+  @apply hover:bg-red-700 focus:ring-red-500;
+}
+
+/* Tablet styles */
+@media (min-width: 640px) {
+  .note-card-header {
+    @apply flex-row items-start justify-between space-y-0;
+  }
+
+  .note-card-meta {
+    @apply flex-row items-center space-y-0 space-x-4;
+    @apply text-right;
+  }
+
+  .note-card-actions {
+    @apply flex-row space-y-0 space-x-2;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .note-card {
+    @apply p-6;
+  }
+
+  .note-card-title {
+    @apply text-xl;
+  }
+
+  .note-card-meta {
+    @apply text-sm;
+  }
+
+  .note-card-description {
+    @apply text-base;
+  }
+}
+
+/* Line clamp utility for older browsers */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

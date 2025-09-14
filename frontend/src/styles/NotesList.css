@@ -1,0 +1,63 @@
+/* styles/NotesList.css */
+
+/* Container for the inline edit form replacing NoteCard */
+.note-edit-form {
+  @apply border border-gray-300 rounded-lg p-4 mb-4 bg-white shadow-sm;
+  @apply flex flex-col space-y-4;
+  max-width: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Title input inside the edit form */
+.note-edit-form input[type="text"] {
+  @apply border border-gray-400 rounded-md px-3 py-2;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Content textarea inside the edit form */
+.note-edit-form textarea {
+  @apply border border-gray-400 rounded-md px-3 py-2 resize-y;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100px;
+  line-height: 1.4;
+}
+
+/* Buttons in the edit form */
+.note-edit-form button {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  cursor: pointer;
+  border: none;
+  min-width: 80px;
+}
+
+/* Save button style — second button */
+.note-edit-form button:nth-child(3) {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Cancel button style — third button */
+.note-edit-form button:nth-child(4) {
+  @apply bg-gray-300 text-gray-700 hover:bg-gray-400 focus:ring-2 focus:ring-gray-400 focus:ring-offset-2;
+}
+
+/* Responsive styling for wider screens */
+@media (min-width: 640px) {
+  .note-edit-form {
+    @apply flex-col space-y-4;
+  }
+
+  .note-edit-form input[type="text"],
+  .note-edit-form textarea {
+    width: 100%;
+  }
+
+  .note-edit-form button {
+    min-width: 100px;
+  }
+}
